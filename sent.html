@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartcampus</title>
+    <style>/* General Reset */
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f5f7fa;
+    margin: 0;
+    padding-top: 60px; /* For fixed navbar spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+        /* Success Box Styling */
+        .successbox {
+            background-color: #ffffff; /* White background for the box */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        .successbox h1 {
+            font-size: 36px;
+            color: #1565c0; /* Green color for success */
+            margin-bottom: 15px;
+        }
+        
+        .successbox h4 {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        /* Image Styling */
+        .successbox img {
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        
+       
+        
+
+        
+        @media (max-width: 768px) {
+            .successbox {
+                padding: 20px;
+                width: 90%;
+            }
+        
+            .successbox h1 {
+                font-size: 28px;
+            }
+        
+            .successbox h4 {
+                font-size: 18px;
+            }
+        
+            
+        }
+        .navbar {
+            width: 100%;
+            background-color: #1565c0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h2 {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px; /* Space between links */
+        }
+
+        .navbar .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 15px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .navbar .nav-links a:hover {
+            background-color: #00509e; /* Lighter Blue on hover */
+            transform: translateY(-2px); /* Subtle hover effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Smartcampus</h2>
+        <div class="nav-links">
+            <a href="./smartcampus.php">Home</a>
+            <a href="./contactus.php">Dashboard</a>
+        </div>
+    </div>
+    <div class = successbox> 
+        <H1>Mail Sent Successfully!!</H1>
+        <h4>Thanks for your response we will get back to you soon 😊</h4>
+        <br>
+        <img src="./assets/th-removebg-preview.png" alt="Italian Trulli">
+
+       
+    </div>
+    
+</body>
+</html>

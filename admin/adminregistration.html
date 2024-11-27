@@ -1,0 +1,209 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Registration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+    
+        /* Body Styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e3f2fd;
+            color: #333;
+            height: 100vh;
+            margin: 0;
+            justify-content: center;
+        }
+    
+        /* Form Container Styling */
+        .container {
+            width: 350px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 80px; /* Space for navbar */
+        }
+    
+        /* Heading Styling */
+        h1 {
+            font-size: 1.8rem;
+            color: #1565c0;
+            margin-bottom: 20px;
+        }
+    
+        /* Labels */
+        form label {
+            font-size: 1rem;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+    
+        /* Input Fields */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+    
+        input:focus {
+            border-color: #1565c0;
+            box-shadow: 0 0 5px rgba(21, 101, 192, 0.5);
+            outline: none;
+        }
+    
+        /* Button Styling */
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #1565c0;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 10px;
+        }
+    
+        button:hover {
+            background-color: #0d47a1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        button:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+    
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+
+        
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    background-color: #1565c0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h2 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.navbar .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #00509e; /* Lighter Blue on hover */
+    transform: translateY(-2px); /* Subtle hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Navbar for Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+
+    .navbar h2 {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .navbar .nav-links a {
+        width: 100%;
+        text-align: left;
+        padding: 10px 20px;
+    }
+}
+    </style>
+    
+</head>
+<body>
+    <div class="navbar">
+        <h2>Smartcampus</h2>
+       <div class="nav-links">
+       <a href="\smartcampus/smartcampus.php">Home</a>
+       <a href="./adminlogin.php">Admin Login</a>
+       <a href="\smartcampus/User/userlogin.php">User Login</a>
+   </div>
+   </div>
+    <div class="container">
+        <h1>Register New Admin</h1>
+        <form method="post" action="adminregistration.php">
+            
+            <input type="text" id="admin_name" name="admin_name" placeholder="name" required>
+    
+           
+            <input type="text" id="admin_username" name="admin_username" placeholder="username" required>
+    
+           
+            <input type="password" id="admin_password" name="admin_password" placeholder="password" required>
+    
+          
+            <input type="text" id="admin_emailid" name="admin_emailid" placeholder="email" required>
+    
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>

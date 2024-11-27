@@ -1,0 +1,157 @@
+/* Centered Edit Form Container */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Ensure content doesn't overlap with the navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.edit-user-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Title Styling */
+.edit-user-container h1 {
+    margin-bottom: 20px;
+    color: #1565c0;
+    font-size: 24px;
+}
+
+/* Input Fields */
+.edit-user-container input,
+.edit-user-container select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus Effect */
+.edit-user-container input:focus,
+.edit-user-container select:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 5px rgba(21, 101, 192, 0.5);
+    outline: none;
+}
+
+/* Buttons */
+.edit-user-container .update-btn,
+.edit-user-container .back-btn {
+    display: inline-block;
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+.edit-user-container .update-btn:hover,
+.edit-user-container .back-btn:hover {
+    background-color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Button Specific */
+.edit-user-container .back-btn {
+    background-color: #555;
+}
+
+.edit-user-container .back-btn:hover {
+    background-color: #333;
+}
+.navbar {
+    width: 100%;
+    background-color: #1565c0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h2 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.navbar .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #00509e; /* Lighter Blue on hover */
+    transform: translateY(-2px); /* Subtle hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Navbar for Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+
+    .navbar h2 {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .navbar .nav-links a {
+        width: 100%;
+        text-align: left;
+        padding: 10px 20px;
+    }
+}
